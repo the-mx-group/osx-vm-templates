@@ -106,6 +106,8 @@
         "../scripts/xcode-cli-tools.sh",
         "../scripts/chef-omnibus.sh",
         "../scripts/puppet.sh",
+        "../scripts/homebrew.sh",
+        "../scripts/salt.sh",
         "../scripts/add-network-interface-detection.sh",
         "../scripts/autologin.sh",
         "../scripts/system-update.sh",
@@ -113,6 +115,7 @@
       ],
       "environment_vars": [
         "AUTOLOGIN={{user `autologin`}}",
+        "BREW={{user `brew`}}",
         "CHEF_VERSION={{user `chef_version`}}",
         "FACTER_VERSION={{user `facter_version`}}",
         "HIERA_VERSION={{user `hiera_version`}}",
@@ -122,6 +125,8 @@
         "PASSWORD={{user `password`}}",
         "PUPPET_VERSION={{user `puppet_version`}}",
         "PUPPET_AGENT_VERSION={{user `puppet_agent_version`}}",
+        "SALT={{user `salt`}}",
+        "SALT_MASTER={{user `salt_master`}}",
         "UPDATE_SYSTEM={{user `update_system`}}",
         "USERNAME={{user `username`}}"
       ],
@@ -131,6 +136,9 @@
   "variables": {
     "autologin": "false",
     "chef_version": "none",
+    "brew": "none",
+    "salt": "none",
+    "salt_master": "",
     "facter_version": "none",
     "hiera_version": "none",
     "install_vagrant_keys": "true",
